@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Representación de Grafos</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="wrap"><h1>Post #2 — Representación de Grafos</h1><nav class="main-nav"><a href="../index.html">Inicio</a></nav></div></header>
+  <main class="wrap">
+    <article class="card">
+      <p class="post-meta">Formas principales en memoria</p>
+      <h2 class="section-title">1) Lista de Adyacencia</h2>
+      <p>Para cada nodo guardamos una lista (vector, linked-list) con sus vecinos. Muy eficiente en espacio para grafos dispersos.</p>
+
+      <h3>Ejemplo (mismo grafo del Post #1)</h3>
+      <pre class="code">A: B, D
+B: A, C, D
+C: B, D, E
+D: A, B, C
+E: C</pre>
+
+      <h2 class="section-title">2) Matriz de Adyacencia</h2>
+      <p>Matriz NxN donde la celda (i,j) indica si existe arista entre i y j. Consultas O(1), pero usa O(N^2) espacio.</p>
+
+      <h3>Matriz (A,B,C,D,E)</h3>
+      <pre class="code">   A B C D E
+A: 0 1 0 1 0
+B: 1 0 1 1 0
+C: 0 1 0 1 1
+D: 1 1 1 0 0
+E: 0 0 1 0 0</pre>
+
+      <h3>Comparación rápida</h3>
+      <ul>
+        <li><strong>Lista de adyacencia:</strong> Mejor para grafos dispersos; iterar vecinos es eficiente.</li>
+        <li><strong>Matriz de adyacencia:</strong> Mejor si necesitas chequear arista frecuentemente en O(1) o si grafo denso.</li>
+      </ul>
+
+      <h3>Visual: ambas representaciones</h3>
+      <p>Las dos vistas aplicadas al mismo grafo ayudan a entender diferencias.</p>
+
+    </article>
+  </main>
+  <footer class="site-footer"><div class="wrap">Volver a <a href="../index.html">Inicio</a></div></footer>
+</body>
+</html>

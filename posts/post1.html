@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Introducción a los Grafos</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Post #1 — Introducción a los Grafos</h1>
+      <nav class="main-nav"><a href="../index.html">Inicio</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="card">
+      <p class="post-meta">Conceptos fundamentales</p>
+      <h2 class="section-title">¿Qué es un grafo?</h2>
+      <p>Un grafo G = (V, E) es una colección de <strong>vértices</strong> (o <em>nodos</em>) V y un conjunto de <strong>aristas</strong> E que conectan pares de vértices. Los grafos modelan relaciones entre objetos.</p>
+
+      <h3>Elementos clave</h3>
+      <ul>
+        <li><strong>Vértices / Nodos:</strong> Entidades o puntos (ej. personas, ciudades).</li>
+        <li><strong>Aristas / Ejes:</strong> Conexiones entre nodos (ej. rutas, relaciones).</li>
+        <li><strong>Dirigido vs No dirigido:</strong> Si las aristas tienen dirección o no.</li>
+        <li><strong>Ponderado:</strong> Si las aristas tienen un peso (coste, distancia).</li>
+      </ul>
+
+      <h3>Ejemplo visual</h3>
+      <p>Diagrama de un grafo no dirigido con 5 nodos (colores verde/ blanco, estilo limpio).</p>
+
+      <!-- Simple SVG grafo 5 nodos -->
+      <svg viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafo no dirigido de ejemplo">
+        <defs>
+          <style> .n{fill:#ffffff;stroke:#1eae57;stroke-width:4;} .e{stroke:#167a3b;stroke-width:3;} .lab{font:600 14px/1.2rem sans-serif;fill:#0b5b2f}</style>
+        </defs>
+        <!-- aristas -->
+        <line class="e" x1="120" y1="120" x2="260" y2="60" />
+        <line class="e" x1="260" y1="60" x2="400" y2="120" />
+        <line class="e" x1="120" y1="120" x2="260" y2="180" />
+        <line class="e" x1="260" y1="180" x2="400" y2="120" />
+        <line class="e" x1="260" y1="60" x2="260" y2="180" />
+
+        <!-- nodos -->
+        <circle class="n" cx="120" cy="120" r="28"/>
+        <text class="lab" x="120" y="126" text-anchor="middle">A</text>
+
+        <circle class="n" cx="260" cy="60" r="28"/>
+        <text class="lab" x="260" y="66" text-anchor="middle">B</text>
+
+        <circle class="n" cx="400" cy="120" r="28"/>
+        <text class="lab" x="400" y="126" text-anchor="middle">C</text>
+
+        <circle class="n" cx="260" cy="180" r="28"/>
+        <text class="lab" x="260" y="186" text-anchor="middle">D</text>
+
+        <circle class="n" cx="520" cy="60" r="28"/>
+        <text class="lab" x="520" y="66" text-anchor="middle">E</text>
+
+        <!-- edge from C to E -->
+        <line class="e" x1="400" y1="120" x2="520" y2="60" />
+      </svg>
+
+      <h3>Videos ilustrativos</h3>
+      <p>Recomendados (YouTube):</p>
+      <ul>
+        <li><a href="https://www.youtube.com/results?search_query=introduccion+grafos" target="_blank" rel="noopener">Búsqueda: "introducción grafos"</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=graph+theory+overview" target="_blank" rel="noopener">Búsqueda en inglés: "graph theory overview"</a></li>
+      </ul>
+
+    </article>
+  </main>
+
+  <footer class="site-footer"><div class="wrap">Volver a <a href="../index.html">Inicio</a></div></footer>
+</body>
+</html>
